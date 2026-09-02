@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Data</title>
+</head>
+<body>
+
+    <h2>Submit Your Data</h2>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label }}
+        {{ form.name() }}
+        <br><br>
+
+        {{ form.email.label }}
+        {{ form.email() }}
+        <br><br>
+
+        {{ form.submit() }}
+    </form>
+
+</body>
+</html>
